@@ -1,0 +1,24 @@
+/*=============== NEWSLETTER ===============*/
+.newsletter {
+  &__description {
+    margin-bottom: var(--mb-1-5);
+    text-align: center;
+  }
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.75rem;
+    background: var(--container-color);
+    padding: 1rem;
+  }
+  &__input {
+    background: none;
+    padding: 0 0.5rem;
+    width: 70%;
+    color: var(--title-color);
+
+    &::placeholder {
+      color: var(--text-color);
+    }
+  }
+}

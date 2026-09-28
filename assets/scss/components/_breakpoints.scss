@@ -1,0 +1,285 @@
+/*===============  BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .container {
+    margin-right: var(--mb-1);
+    margin-left: var(--mb-1);
+  }
+
+  .home {
+    &__img {
+      height: 200px;
+    }
+    &__buttons {
+      row-gap: 1rem;
+      flex-direction: column;
+      width: max-content;
+    }
+  }
+
+  .category__container,
+  .trick__container {
+    grid-template-columns: 0.8fr;
+    justify-content: center;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .about__container {
+    grid-template-columns: 0.8fr;
+    justify-content: center;
+  }
+  .newsletter {
+    &__container {
+      display: grid;
+      grid-template-columns: 0.7fr;
+      justify-content: center;
+    }
+    &__description {
+      padding: 0 3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  body {
+    margin: 0;
+  }
+
+  .section {
+    padding: 7rem 0 2rem;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+
+    &__img,
+    &__close,
+    &__toggle {
+      display: none;
+    }
+
+    &__list {
+      column-gap: 3rem;
+      flex-direction: row;
+    }
+    &__link {
+      font-weight: initial;
+      text-transform: initial;
+    }
+  }
+
+  .home {
+    &__content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+      padding: 8rem 0 2rem;
+    }
+    &__img {
+      height: 300px;
+    }
+  }
+
+  .swiper-pagination {
+    margin-top: var(--mb-2);
+  }
+
+  .category {
+    &__container {
+      grid-template-columns: repeat(3, 200px);
+      justify-content: center;
+    }
+  }
+
+  .about {
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+    &__title,
+    &__data {
+      text-align: initial;
+    }
+    &__img {
+      width: 250px;
+    }
+  }
+
+  .trick {
+    &__container {
+      grid-template-columns: repeat(3, 200px);
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+
+  .discount {
+    &__container {
+      grid-template-columns: repeat(2, max-content);
+      column-gap: 3rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3rem;
+      padding: 3rem 0;
+    }
+    &__img {
+      order: -1;
+      width: 350px;
+    }
+    &__data {
+      padding-right: 6rem;
+    }
+  }
+
+  .newsletter__container {
+    grid-template-columns: 0.5fr;
+  }
+
+  .footer {
+    &__container {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 1rem;
+      justify-items: center;
+    }
+    &__img-two {
+      right: initial;
+      bottom: 0;
+      left: 15%;
+    }
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 992px) {
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .section__title {
+    margin-bottom: 3rem;
+    font-size: var(--h1-font-size);
+  }
+
+  .home {
+    &__content {
+      gap: 3rem;
+      padding-top: 9rem;
+    }
+    &__group {
+      padding-top: 0;
+    }
+    &__img {
+      transform: translateY(-3rem);
+      height: 400px;
+    }
+    &__indicator {
+      top: initial;
+      right: initial;
+      bottom: 15%;
+      left: 45%;
+
+      &::after {
+        top: 0;
+        height: 75px;
+      }
+    }
+    &__details-img {
+      right: 58%;
+      bottom: 0%;
+    }
+    &__title {
+      margin-bottom: var(--mb-1-5);
+    }
+    &__description {
+      margin-bottom: var(--mb-2-5);
+      padding-right: 2rem;
+    }
+  }
+
+  .category {
+    &__container {
+      column-gap: 8rem;
+    }
+    &__img {
+      width: 200px;
+    }
+  }
+
+  .about {
+    &__container {
+      column-gap: 7rem;
+    }
+    &__img {
+      width: 350px;
+    }
+    &__description {
+      padding-right: 2rem;
+    }
+  }
+
+  .trick {
+    &__container {
+      gap: 3.5rem;
+    }
+    &__content {
+      border-radius: 1.5rem;
+    }
+    &__img {
+      width: 110px;
+    }
+    &__title {
+      font-size: var(--h3-font-size);
+    }
+  }
+
+  .discount__container {
+    column-gap: 7rem;
+  }
+
+  .new {
+    &__content {
+      border-radius: 1rem;
+      padding: 2rem 0;
+      width: 310px;
+    }
+    &__img {
+      width: 150px;
+    }
+    &__img,
+    &__subtitle {
+      margin-bottom: var(--mb-1);
+    }
+    &__title {
+      font-size: var(--h3-font-size);
+    }
+  }
+
+  .footer__copy {
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home {
+    &__img {
+      height: 420px;
+    }
+  }
+
+  .swiper-pagination {
+    margin-top: var(--mb-2-5);
+  }
+
+  .footer {
+    &__img-one {
+      width: 120px;
+    }
+    &__img-two {
+      top: 30%;
+      left: -3%;
+      width: 180px;
+    }
+  }
+}

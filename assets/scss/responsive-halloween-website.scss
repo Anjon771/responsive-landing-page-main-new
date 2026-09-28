@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+@import 'components/font';
+@import 'components/colors';
+@import 'components/layout';
+@import 'components/header';
+@import 'components/home';
+@import 'components/buttons';
+@import 'components/category';
+@import 'components/about';
+@import 'components/trick';
+@import 'components/discount';
+@import 'components/new';
+@import 'components/newsletter';
+@import 'components/footer';
+@import 'components/scroll';
+@import 'components/breakpoints';
+@import 'components/keyframes';
+@import 'components/webby';

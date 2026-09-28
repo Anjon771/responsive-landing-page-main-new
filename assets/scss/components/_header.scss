@@ -1,0 +1,140 @@
+/*=============== HEADER ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+  width: 100%;
+}
+
+/*=============== NAV ===============*/
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+
+  &__logo {
+    display: flex;
+    column-gap: 0.5rem;
+    align-items: center;
+    z-index: 1;
+    font-weight: var(--font-medium);
+
+    &-img {
+      width: 1.25rem;
+    }
+  }
+  &__link,
+  &__logo,
+  &__toggle,
+  &__close {
+    color: var(--title-color);
+  }
+
+  &__toggle {
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+
+  &__menu {
+    @media screen and (max-width: 767px) {
+      position: fixed;
+      top: -150%;
+      left: 0;
+      z-index: var(--z-fixed);
+      transition: 0.4s;
+      border-radius: 0 0 1.5rem 1.5rem;
+      background: var(--container-color);
+      padding: 3.5rem 0 1.5rem 4rem;
+      width: 100%;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+  }
+  &__close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.7rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+  }
+  &__list {
+    display: flex;
+    row-gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__link {
+    transition: 0.4s;
+    font-weight: var(--font-black);
+    text-transform: uppercase;
+
+    &:hover {
+      color: var(--text-color);
+    }
+  }
+  &__theme {
+    z-index: 101;
+    max-width: 11rem;
+    .color-switcher {
+      padding: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      &.forest-switcher {
+        background-color: #3e6b4f;
+      }
+      &.fire-switcher {
+        background-color: #ff4500;
+      }
+      &.earth-switcher {
+        background-color: #ffc154;
+      }
+      &.air-switcher {
+        background-color: #00bcd4;
+      }
+      &.water-switcher {
+        background-color: #0099cc;
+      }
+      &.high-switcher {
+        background-color: #222;
+      }
+    }
+  }
+}
+
+/* Change background header */ // @see https://stackoverflow.com/a/23208450/16711967
+.scroll-header,
+.show-menu {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+/* Show menu */
+.show-menu {
+  top: 0;
+  + .nav__toggle {
+    visibility: hidden;
+  }
+}
+
+/* Active link */
+.active-link {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    bottom: -0.75rem;
+    left: 45%;
+    border-radius: 50%;
+    background-color: var(--title-color);
+    width: 5px;
+    height: 5px;
+    content: '';
+  }
+}
